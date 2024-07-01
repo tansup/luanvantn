@@ -1,0 +1,116 @@
+/*** Topbar Start ***/
+.fixed-top {
+  transition: 0.5s;
+  background: black;
+  border: 0;
+  margin-top: 30px;
+  position: fixed;
+}
+
+/*** Navbar Start ***/
+.navbar .navbar-nav .nav-link {
+  padding: 30px 15px;
+  font-size: 16px;
+  transition: 0.5s;
+}
+
+.navbar {
+  height: 100px;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+.navbar-light .navbar-nav .nav-link.active {
+  /* color: rgba(0, 0, 0, .9); */
+}
+
+.navbar .navbar-nav .nav-link:hover,
+.navbar .navbar-nav .nav-link.active,
+.fixed-top.bg-white .navbar .navbar-nav .nav-link:hover,
+.fixed-top.bg-white .navbar .navbar-nav .nav-link.active {
+  color: var(--bs-primary);
+}
+
+.navbar .dropdown-toggle::after {
+  border: none;
+  content: "\f107";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 700;
+  vertical-align: middle;
+  margin-left: 5px;
+}
+
+@media (min-width: 1200px) {
+  .navbar .nav-item .dropdown-menu {
+    display: block;
+    visibility: hidden;
+
+    transform: rotateX(-75deg);
+    transform-origin: 0% 0%;
+    border: 0;
+    transition: 0.5s;
+    opacity: 0;
+    width: 100%;
+  }
+  .navbar-expand-xl {
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    width: 100%;
+  }
+}
+
+.dropdown .dropdown-menu a:hover {
+  background: var(--bs-secondary);
+  color: var(--bs-primary);
+}
+
+.navbar .nav-item:hover .dropdown-menu {
+  transform: rotateX(0deg);
+  visibility: visible;
+  background: var(--bs-light) !important;
+  border-radius: 10px !important;
+  transition: 0.5s;
+  opacity: 1;
+}
+
+#searchModal .modal-content {
+  background: rgba(255, 255, 255, 0.8);
+}
+/*** Navbar End ***/
+.nav-links-mobile {
+  display: block;
+  text-align: center;
+  margin: 2rem auto;
+  border-radius: 4px;
+  width: 80%;
+  text-decoration: none;
+  font-size: 1.5rem;
+  background-color: transparent;
+  color: #fff;
+  padding: 14px 20px;
+  border: 1px solid #fff;
+  transition: all 0.3s ease-out;
+}
+
+.nav-links-mobile:hover {
+  background: #fff;
+  color: green;
+  transition: 250ms;
+}
+.nav-links-mobile {
+  display: none;
+}
+.container-fluid {
+  width: 100%;
+  padding-right: var(--bs-gutter-x, 0.75rem);
+  padding-left: var(--bs-gutter-x, 0.75rem);
+  margin-right: auto;
+  margin-left: auto;
+  margin: 0px;
+}
+.btn--outline {
+  background-color: transparent;
+  color: #fff;
+  padding: 8px 20px;
+  border: 1px solid var(--primary);
+  transition: all 0.3s ease-out;
+}
